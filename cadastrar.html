@@ -8,7 +8,7 @@
     <div id="cabecalho">
         <div id="banner">
         <!-- Inserir a figura do banner-->
-      </div>
+      </div><!-- fim div banner-->
       <div id="menu">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -16,7 +16,7 @@
             <li><a href="#">Categoria de Receitas</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
-      </div>
+      </div><!--fim div menu-->
       <div id="Links Importantes">
           <p id="redes-sociais">
               <img src="img/face.png" />
@@ -27,9 +27,11 @@
               <input type="search" name="pesquisa" />
               <input type="image" name="search" alt="Pesquisar" src="img/search.png" />
           </p>
-      </div>
+      </div><!--fim div links importantes-->
+    </div><!--fim div cabecalho-->
     <div id="corpo">
         <h1>Nova Receita</h1>
+        <form action="salvar.jsp" method="post"/>
         <p><label for="nome">Nome da Receita:
           <input type="text" name="nome" id="nome" placeholder="Digite o nome da receita" size="50" />
         </label></p>
@@ -94,7 +96,67 @@
                         <textarea id="modo-preparo" name="modo-preparo" placeholder="Digite o modo de preparo" cols="50" rows="10"></textarea>
                     </label>
               </p>
-          </div>
+              <p>
+                  Dificuldade:
+                  <input id="facil" type="radio" name="dificuldade" value="f" />
+                  <label for="facil">Fácil</label>
+                  <input id="medio" type="radio" name="difiuldade" value="n" />
+                  <label for="medio">Médio</label>
+                  <input id="dificil" type="radio" name="dificuldade" value="d" />
+                  <label id="dificil">Difícil</label>
+              </p>
+              <p>
+                  Tempo de preparo: <input type="number" name="tempo-preparo" min="1" />
+                  <select name="unidade-tempo">
+                      <option value="min">minutos</option>
+                      <option value="h">horas</option>
+                      <option value="d">dias</option>
+                  </select>
+              </p>
+              <p>
+                  Rendimentos: <input type="number" name="rendimento" min="1" max="100" /> porções
+              </p>
+              <p>
+                  Acompanamentos <br />
+                  <table>
+                      <tr>
+                          <td>
+                              <label>
+                                  <input type="checkbox" name="acompanhamentos" value"arroz" /> Arroz
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox" name="acompanhamentos" value"feijao" /> Feijão
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox" name="acompanhamentos" value"fritas" /> Batata Frita
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox" name="acompanhamentos" value"salada" /> Salada
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox" name="acompanhamentos" value"batatadoce" /> Batata Doce
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox" name="acompanhamentos" value"pure" /> Purê de Batata
+                              </label>
+                          </td>
+                      </tr>
+                  </table>
+                </p>
+                <p>
+                    <input submit="value" name="salvarreceita"
+
+      </div><!--fim div corpo-->
     <div id="rodape">
       <p> Desenvolvido por 1TDSJ - FIAP &copy; 2019</p>
       <p id="redes-sociais">
@@ -102,6 +164,6 @@
           <img src="img/insta.png" />
           <img src="img/whats.png" />
       </p>
-    </div>
+    </div><!--fim div rodape-->
 </body>
 </html>
